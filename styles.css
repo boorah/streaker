@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(233, 232, 232);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.header i {
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 20px;
+}
+
+.hide-button {
+  visibility: hidden;;
+}
+
+.grids {
+  margin: 30px 10px;
+}
+
+.month {
+  margin: 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month__name {
+  text-transform: capitalize;
+}
+
+.month__grid {
+  margin-top: 20px;
+  width: 330px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.month__grid-item {
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.done {
+  background: lightgreen;
+}
+
+.not-done {
+  background: rgb(255, 121, 121);
+}
+
+@media (min-width: 768px) {
+  .grids {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .grids {
+    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
